@@ -50,7 +50,7 @@ function removeFromEtcHosts(url) {
       let port = '';
       for (let i = 0; i < lines.length; i += 1) {
         if (typeof lines[i] === 'object' && lines[i][1] === url) {
-          port = lines[i - 1].split(' ')[2];
+          port = lines[i + 1].split(' ')[2];
           ip = lines[i][0];
         }
       }
